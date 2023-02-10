@@ -1,0 +1,65 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "54ae75905e6b35f11f9160641860f095f83a51829ad72838c5bffc69f29de8d4"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.11"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "attrs": {
+            "hashes": [
+                "sha256:29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836",
+                "sha256:c9227bfc2f01993c03f68db37d1d15c9690188323c067c641f1a35ca58185f99"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==22.2.0"
+        },
+        "cmd2": {
+            "hashes": [
+                "sha256:71873c11f72bd19e2b1db578214716f0d4f7c8fa250093c601265a9a717dee52",
+                "sha256:f1988ff2fff0ed812a2d25218a081b0fa0108d45b48ba2a9272bb98091b654e6"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==2.4.3"
+        },
+        "mypackage": {
+            "hashes": [
+                "sha256:abb5f969061f0eabd4dbcaa5ba54933cd6c5160b90eef6dd4510c2940ab6a70b"
+            ],
+            "index": "pypi",
+            "version": "==0.1"
+        },
+        "pyperclip": {
+            "hashes": [
+                "sha256:105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"
+            ],
+            "version": "==1.8.2"
+        },
+        "pyreadline3": {
+            "hashes": [
+                "sha256:6f3d1f7b8a31ba32b73917cefc1f28cc660562f39aea8646d30bd6eff21f7bae",
+                "sha256:b0efb6516fd4fb07b45949053826a62fa4cb353db5be2bbb4a7aa1fdd1e345fb"
+            ],
+            "markers": "sys_platform == 'win32'",
+            "version": "==3.4.1"
+        },
+        "wcwidth": {
+            "hashes": [
+                "sha256:795b138f6875577cd91bba52baf9e445cd5118fd32723b460e30a0af30ea230e",
+                "sha256:a5220780a404dbe3353789870978e472cfe477761f06ee55077256e509b156d0"
+            ],
+            "version": "==0.2.6"
+        }
+    },
+    "develop": {}
+}

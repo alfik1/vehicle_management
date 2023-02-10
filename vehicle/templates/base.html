@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-custom">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Navbar brand -->
+            <a class="navbar-brand">Vehicle Registration</a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link active" aria-current="page" href="{%url 'home'%}">
+                            <div>
+                                <i class="fas fa-home fa-lg mb-1"></i>
+                            </div>
+                            Home
+                        </a>
+                    </li>
+                    {%if request.user.options == 'SA'%}
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" href="{%url 'vehicle-registration'%}">
+                            <div>
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            Register Your Vehicle
+                        </a>
+                    </li>
+                    {%endif%}
+                    
+                </ul>
+                <!-- Left links -->
+
+                <!-- Right links -->  
+                <li class="nav-item text-center mx-2 mx-lg-1">
+                    <a class="nav-link" href="{%url 'signout'%}">
+                        <div>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                         Logout
+                    </a>
+                </li>                
+            </div>    
+        </div>    
+    </nav>
+    <style>
+        .btn {
+            padding: .45rem 1.5rem .35rem;
+        }
+
+        .gradient-custom {
+            /* fallback for old browsers */
+            background: #c471f5;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
+        }
+    </style>
+    <!-- Navbar -->
+    <!-- Page content-->
+    <div class="container">
+        <div class="row">
+            {%block body_block%}
+
+            {%endblock%}
+        </div>
+        <!-- Footer-->
+        <footer class="py-5  bg-dark  fixed-bottom">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+            </div>
+        </footer>
+</body>
+</html>

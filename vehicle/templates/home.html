@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="card-body mt-5 shadow p-3 mb-5 bg-body-tertiary rounded ">
+        <table class="table mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Vehicle Number</th>
+                <th scope="col">Vehicle Type</th>
+                <th scope="col">Vehicle Model</th>
+                <th scope="col">Vehicle Description</th>
+                {%if request.user.options == 'SA' or request.user.options == 'A' %}
+                <th>Actions</th>
+                {%endif%}
+              </tr>
+            </thead>
+            {%for v in vehicle%}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{v.id}}</th>
+                        <td>{{v.vehicle_number}}</td>
+                        <td>{{v.vehicle_type}}</td>
+                        <td>{{v.vehicle_model}}</td>
+                        <td>{{v.vehicle_description}}</td>
+                        {%if request.user.options == 'SA' or request.user.options == 'A'%}
+                        <td>
+                            <a href="{%url 'vehicle-update' v.id %}"><i class="fa-solid fa-pen-to-square" title="Edit"></i></a>
+                        </td>
+                        {%endif%}
+                        {%if request.user.options == 'SA'%}
+                        <td>
+                            <a href="{%url 'delete' v.id%}"><i class="fa-solid fa-trash" title="Delete"></i></a>
+                        </td>
+                        {%endif%}
+
+                      </tr>
+                </tbody>
+            {%endfor%}
+          </table>
+
+    </div>
+    
+</div>
+{%endblock%}
